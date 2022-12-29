@@ -1,0 +1,46 @@
+{% extends "base.html" %} {% block content %}
+<div class="frame" xmlns="http://www.w3.org/1999/html">
+	<div class="center">
+		<div class="title">
+			<h1>Drop file to upload</h1>
+		</div>
+ <form id="upload-file" method="post" enctype="multipart/form-data">
+
+
+<label for="imageUpload"  class="btn btn-outline-secondary my-2 my-sm-0" style="padding-top: 13px">
+            Upload
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+
+
+
+
+</form>
+        <div>
+
+
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Submit!</button>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 id="result">
+        <span> </span>
+    </h3>
+
+</div>
+	</div>
+
+</div>
+
+
+
+
+{% endblock %}
